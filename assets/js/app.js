@@ -1,12 +1,14 @@
 
 const apiAll = new API();
 const allUi = new UI();
-
+// some plces on the html
+const wikierrresult = document.getElementById('wikiresultError');
+const geoerrresult = document.getElementById('georesultError');
 
 // Event Listener
 document.querySelector('#generatePassword').addEventListener('submit',generatePassword);
 document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
-
+document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
 // Generate Pass
 function generatePassword(e)
 {
@@ -67,7 +69,7 @@ function generateWikiPage(e)
     
      if(countryName.length ===0)
      {
-        allUi.showError("Enter the Country Name!!");
+        allUi.showError(wikierrresult,"Enter the Country Name!!");
      }
     else
     {
@@ -78,6 +80,33 @@ function generateWikiPage(e)
             
      
          });
+    }
+    
+    // prevent 
+    e.preventDefault();
+}
+
+
+// get Geo Location
+function getGeoLocation(e)
+{
+    // data from UI
+    const countryName = document.getElementById('ipAdress').value;
+ 
+    
+     if(countryName.length ===0)
+     {
+        allUi.showError(geoerrresult,"Enter Ip Adress!!");
+     }
+    else
+    {
+        
+        // apiAll.getCountryWiki(countryName).then(data=>{
+
+        //     allUi.getCountry(data);
+            
+     
+        //  });
     }
     
     // prevent 

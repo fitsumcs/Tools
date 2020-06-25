@@ -8,7 +8,8 @@ class UI
         this.countryCode = document.getElementById('countryCode');
         this.countryContinet = document.getElementById('countryContinet');
         this.countryWikiLink = document.getElementById('countryWikiLink');
-        this.errresult = document.getElementById('resultError');
+        this.wikierrresult = document.getElementById('wikiresultError');
+        
    }
 
 
@@ -25,7 +26,7 @@ getCountry(data)
    if(data.isError)
    {
     //    console.log(data);
-    this.showError(data.errorMessage);
+    this.showError(this.wikierrresult,data.errorMessage);
    }
    else
    {
@@ -36,9 +37,9 @@ getCountry(data)
    }
     
 }  
-showError(msg)
+showError(place,msg)
 {
-    this.errresult.innerHTML = `<p class="alert alert-danger">${msg}</p>`;
+    place.innerHTML = `<p class="alert alert-danger">${msg}</p>`;
     setTimeout(()=>{
         document.querySelector('.alert').remove();
     },2000);
