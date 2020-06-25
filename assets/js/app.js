@@ -136,7 +136,7 @@ function getCountryFlag(e)
             allUi.getFlagLink(data);
             // console.log(data)
      
-         }).catch(()=>{allUi.showError(flagresultError,"Cant Find The Country");})
+         })
     }
     
     // prevent 

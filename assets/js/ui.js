@@ -18,6 +18,7 @@ class UI
         this.gIsp = document.getElementById('GIsp');
 
         // Flag Related
+        this.flagresultError = document.getElementById('flagresultError');
         this.gLink = document.getElementById('Fcountry');
         
    }
@@ -80,8 +81,17 @@ getLongLatdata(data)
 //Geo Related
 getFlagLink(data)
 {
-        
+  
+      if(data.status ===404)
+      {
+        this.showError(this.flagresultError,"No Country of that Name");
+      }
+      else
+      {
         this.gLink.innerHTML = `<b>Download Lin : </b><a href=${data.flag} target='blank'>Link</a>`;
+      }
+        
+       
     
 }
 
