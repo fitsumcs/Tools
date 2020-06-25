@@ -9,6 +9,7 @@ const geoerrresult = document.getElementById('georesultError');
 document.querySelector('#generatePassword').addEventListener('submit',generatePassword);
 document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
 document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
+document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
 // Generate Pass
 function generatePassword(e)
 {
