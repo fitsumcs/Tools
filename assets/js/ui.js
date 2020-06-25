@@ -16,6 +16,9 @@ class UI
         this.Longituid = document.getElementById('Longituid');
         this.Latitued = document.getElementById('Latitued');
         this.gIsp = document.getElementById('GIsp');
+
+        // Flag Related
+        this.gLink = document.getElementById('Fcountry');
         
    }
 
@@ -53,7 +56,7 @@ showError(place,msg)
 
 }
 
-// wiki related 
+//Geo Related
 getLongLatdata(data)
 {
     if(!data.success)
@@ -72,5 +75,14 @@ getLongLatdata(data)
 
     
 } 
+
+
+//Geo Related
+getFlagLink(data)
+{
+        
+        this.gLink.innerHTML = `<b>Download Lin : </b><a href=${data.flag} target='blank'>Link</a>`;
+    
+}
 
 }

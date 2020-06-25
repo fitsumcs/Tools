@@ -133,10 +133,10 @@ function getCountryFlag(e)
         
         apiAll.getFlag(countryFlag).then(data=>{
 
-            // allUi.getLongLatdata(data);
-            console.log(data)
+            allUi.getFlagLink(data);
+            // console.log(data)
      
-         }).catch(()=>{allUi.showError(flagresultError,"Cant Find The IP");})
+         }).catch(()=>{allUi.showError(flagresultError,"Cant Find The Country");})
     }
     
     // prevent 
