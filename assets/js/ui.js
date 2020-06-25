@@ -10,7 +10,7 @@ class UI
 //  generatePassword
 getPassword(data)
 {
-    this.passWordResult.innerHTML = `Result : ${data}`;
+    this.passWordResult.innerHTML = `Generated Password : ${data}`;
 }  
 
 
