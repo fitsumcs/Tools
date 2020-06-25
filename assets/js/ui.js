@@ -88,7 +88,7 @@ getFlagLink(data)
       }
       else
       {
-        this.gLink.innerHTML = `<b>Download Lin : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.gLink.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
       }
         
        
