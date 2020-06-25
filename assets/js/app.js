@@ -5,7 +5,7 @@ const allUi = new UI();
 
 // Event Listener
 document.querySelector('#generatePassword').addEventListener('submit',generatePassword);
-
+document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
 
 // Generate Pass
 function generatePassword(e)
@@ -53,6 +53,33 @@ function generatePassword(e)
        allUi.getPassword(data);
 
     });
+    // prevent 
+    e.preventDefault();
+}
+
+
+// Generate wiki page 
+function generateWikiPage(e)
+{
+    // data from UI
+    const countryName = document.getElementById('countryName').value;
+ 
+    
+     if(countryName.length ===0)
+     {
+        allUi.showError("Enter the Country Name!!");
+     }
+    else
+    {
+        
+        apiAll.getCountryWiki(countryName).then(data=>{
+
+            allUi.getCountry(data);
+            
+     
+         });
+    }
+    
     // prevent 
     e.preventDefault();
 }
