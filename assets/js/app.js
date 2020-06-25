@@ -4,12 +4,13 @@ const allUi = new UI();
 // some plces on the html
 const wikierrresult = document.getElementById('wikiresultError');
 const geoerrresult = document.getElementById('georesultError');
+const flagresultError = document.getElementById('flagresultError');
 
 // Event Listener
 document.querySelector('#generatePassword').addEventListener('submit',generatePassword);
 document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
 document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
-document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
+document.querySelector('#getCountryFlag').addEventListener('submit',getCountryFlag);
 // Generate Pass
 function generatePassword(e)
 {
@@ -108,6 +109,34 @@ function getGeoLocation(e)
             allUi.getLongLatdata(data);
      
          }).catch(()=>{allUi.showError(geoerrresult,"Cant Find The IP");})
+    }
+    
+    // prevent 
+    e.preventDefault();
+}
+
+
+
+// get Country Flag
+function getCountryFlag(e)
+{
+    // data from UI
+    const countryFlag = document.getElementById('countryFlag').value;
+ 
+    
+     if(countryFlag.length ===0)
+     {
+        allUi.showError(flagresultError,"Enter Country Name!!");
+     }
+    else
+    {
+        
+        apiAll.getFlag(countryFlag).then(data=>{
+
+            // allUi.getLongLatdata(data);
+            console.log(data)
+     
+         }).catch(()=>{allUi.showError(flagresultError,"Cant Find The IP");})
     }
     
     // prevent 
