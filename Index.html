@@ -27,36 +27,49 @@
                     <div class="card-body">
                       <h5 class="card-title font-weight-bold">Password Generator</h5>
                       <p class="card-text">Generate a password with the specified conditions and return the result.</p>
-                      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      <a class="btn btn-primary" data-toggle="collapse" href="#passwordGenerator" role="button" aria-expanded="false" aria-controls="passwordGenerator">
                         View The App
                       </a>
-                      <div class="collapse" id="collapseExample">
+                      <div class="collapse" id="passwordGenerator">
                         <div class="card card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                         <!-- The From -->
+                         <form id="generatePassword">
+                            <div class="form-group mt-3">
+                              <label for="symbol">Contain Symbols ?</label>
+                              <input type="number" class="form-control" id="symbol" aria-describedby="emailHelp" >
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="uppercase">Contain Uppercase ?</label>
+                                <input type="number" class="form-control" id="uppercase" aria-describedby="emailHelp" >
+                              </div>
+                              <div class="form-group mt-3">
+                                <label for="lowercase">Contain Lowercase ?</label>
+                                <input type="number" class="form-control" id="lowercase" aria-describedby="emailHelp" >
+                              </div>
+                              <div class="form-group mt-3">
+                                <label for="cnumber">Contain Number ?</label>
+                                <input type="number" class="form-control" id="cnumber" aria-describedby="emailHelp" >
+                              </div>
+                              <div class="form-group mt-3">
+                                <label for="plengeth">Password Length</label>
+                                <input type="number" class="form-control" id="plengeth" aria-describedby="emailHelp" >
+                              </div>
+                              <div class="form-group mt-3">
+                                <P id="result" class="font-weight-bold"></P>
+                                
+                              </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                         <!-- Ends Here -->
+
+
                         </div>
                       </div>
                     </div>
                   </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <div class="card" >
-                    <img src="./assets/img/tool.png" style="height: 300px;width: 300px; border-radius: 400px;" class="ml-5 pl-5 mr-0">
-                    <div class="card-body">
-                      <h5 class="card-title font-weight-bold">Password Generator</h5>
-                      <p class="card-text">Generate a password with the specified conditions and return the result.</p>
-                      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        View The App
-                      </a>
-                      <div class="collapse" id="collapseExample">
-                        <div class="card card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          
-            
+        
+              
     </div>
 
 
