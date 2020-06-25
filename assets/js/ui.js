@@ -10,10 +10,12 @@ class UI
         this.countryWikiLink = document.getElementById('countryWikiLink');
         this.wikierrresult = document.getElementById('wikiresultError');
         // Geo Relatd
+        this.georesultError = document.getElementById('georesultError');
         this.gCountry = document.getElementById('Gcountry');
         this.gCity = document.getElementById('Gcity');
         this.Longituid = document.getElementById('Longituid');
         this.Latitued = document.getElementById('Latitued');
+        this.gIsp = document.getElementById('GIsp');
         
    }
 
@@ -54,11 +56,19 @@ showError(place,msg)
 // wiki related 
 getLongLatdata(data)
 {
-   
-    this.gCountry.innerHTML = `<b>Country : </b>${data.country}`;
-    this.gCity.innerHTML = `<b>City : </b>${data.city}`;
-    this.Longituid.innerHTML = `<b>Longituid : </b>${data.longitude}`;
-    this.Latitued.innerHTML = `<b>Latitued : </b>${data.latitude}`;
+    if(!data.success)
+    {
+  this.showError(this.georesultError,data.message);
+    }
+    else
+    {
+        this.gIsp.innerHTML = `<b>ISP : </b>${data.isp}`;
+        this.gCountry.innerHTML = `<b>Country : </b>${data.country}`;
+        this.gCity.innerHTML = `<b>City : </b>${data.city}`;
+        this.Longituid.innerHTML = `<b>Longituid : </b>${data.longitude}`;
+        this.Latitued.innerHTML = `<b>Latitued : </b>${data.latitude}`;
+    }
+ 
 
     
 } 

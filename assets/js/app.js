@@ -105,7 +105,6 @@ function getGeoLocation(e)
         apiAll.getGeo(ipAdress).then(data=>{
 
             allUi.getLongLatdata(data);
-            console.log(data);
      
          }).catch(()=>{allUi.showError(geoerrresult,"Cant Find The IP");})
     }
