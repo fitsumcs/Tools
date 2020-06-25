@@ -50,10 +50,10 @@ async getGeo(query)
 {
    
   
-   const response = await fetch(`https://ourairport-data-search.p.rapidapi.com/geolocate/${query}`, {
+   const response = await fetch(`https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/?ip=${query}`, {
       "method": "GET",
       "headers": {
-         "x-rapidapi-host": "ourairport-data-search.p.rapidapi.com",
+         "x-rapidapi-host": "ip-geolocation-ipwhois-io.p.rapidapi.com",
          "x-rapidapi-key": "64bca0886bmsha7377930000aed5p1a6aecjsn8fa7b68dbbfb"
       }
    })
