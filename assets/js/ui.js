@@ -4,7 +4,7 @@ class UI
    {
        this.passWordResult = document.getElementById('result');
     //    Wiki related 
-        this.countryName = document.getElementById('countryName');
+        this.countryName = document.getElementById('countryName2');
         this.countryCode = document.getElementById('countryCode');
         this.countryContinet = document.getElementById('countryContinet');
         this.countryWikiLink = document.getElementById('countryWikiLink');
