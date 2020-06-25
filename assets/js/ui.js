@@ -116,6 +116,14 @@ geVedioInformation(data)
       else
       {
         this.gLink.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoTitle.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoCatagory.innerHTML =`<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoFormat.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoDetail.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoChannel.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoUploader.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoUploadeddate.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoviewStat.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
       }
         
        
