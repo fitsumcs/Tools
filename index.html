@@ -21,6 +21,7 @@
       </nav>
     <div class="container mt-3">
         <div class="row">
+            <!-- Password Generater -->
             <div class="col-md-6 mb-3">
                 <div class="card" >
                     <img src="./assets/img/password.jpg" style="height: 300px;width: 300px; border-radius:100px;" class="ml-5 pl-5 mr-0">
@@ -59,6 +60,45 @@
                                 
                               </div>
                             <button type="submit" class="btn btn-primary">Generate Password</button>
+                          </form>
+                         <!-- Ends Here -->
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card" >
+                    <img src="./assets/img/wiki.png" style="height: 300px;width: 300px; border-radius:100px;" class="ml-5 pl-5 mr-0">
+                    <div class="card-body">
+                      <h5 class="card-title font-weight-bold">Country Wiki Page</h5>
+                      <p class="card-text">View a Single Country Wikipidia Pages</p>
+                      <a class="btn btn-primary" data-toggle="collapse" href="#countryWikiLinkGenerater" role="button" aria-expanded="false" aria-controls="countryWikiLinkGenerater">
+                        View The App
+                      </a>
+                      <div class="collapse" id="countryWikiLinkGenerater">
+                        <div class="card card-body">
+                         <!-- The From -->
+                         <form id="getWiki">
+                            <div class="form-group mt-3">
+                              <label for="country">Country Name: </label>
+                              <input type="text" class="form-control" id="countryName" aria-describedby="countryName" >
+                            </div>
+                            <div class="form-group mt-3">
+                                <label id="countryName">Country Name: </label>
+                              </div>
+                              <div class="form-group mt-3">
+                                <label id="countryCode">Country Code: </label>
+                              </div>
+                              <div class="form-group mt-3">
+                                <label id="countryContinet">Country Continent:</label>
+                              </div>
+                              <div class="form-group mt-3">
+                                <label id="countryWikiLink">Wiki Link:</label>
+                              </div>
+                            <button type="submit" class="btn btn-primary">Get Wiki Link:</button>
                           </form>
                          <!-- Ends Here -->
 
