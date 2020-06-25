@@ -5,12 +5,14 @@ const allUi = new UI();
 const wikierrresult = document.getElementById('wikiresultError');
 const geoerrresult = document.getElementById('georesultError');
 const flagresultError = document.getElementById('flagresultError');
+const vedioresultError = document.getElementById('vedioresultError');
 
 // Event Listener
 document.querySelector('#generatePassword').addEventListener('submit',generatePassword);
 document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
 document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
 document.querySelector('#getCountryFlag').addEventListener('submit',getCountryFlag);
+document.querySelector('#getVedioInfo').addEventListener('submit',getVedioInfo);
 // Generate Pass
 function generatePassword(e)
 {
@@ -132,6 +134,36 @@ function getCountryFlag(e)
     {
         
         apiAll.getFlag(countryFlag).then(data=>{
+
+            allUi.getFlagLink(data);
+            // console.log(data)
+     
+         })
+    }
+    
+    // prevent 
+    e.preventDefault();
+}
+
+
+
+
+
+// get getVedioInfo
+function getVedioInfo(e)
+{
+    // data from UI
+    const vedioURL = document.getElementById('vedioURL').value;
+ 
+    
+     if(vedioURL.length ===0)
+     {
+        allUi.showError(vedioresultError,"Enter Vedio URL!!");
+     }
+    else
+    {
+        
+        apiAll.getVedio(vedioURL).then(data=>{
 
             allUi.getFlagLink(data);
             // console.log(data)

@@ -20,6 +20,16 @@ class UI
         // Flag Related
         this.flagresultError = document.getElementById('flagresultError');
         this.gLink = document.getElementById('Fcountry');
+
+        // Vedio Related
+        this.veidoTitle = document.getElementById('veidoTitle');
+        this.veidoCatagory = document.getElementById('veidoCatagory');
+        this.veidoFormat = document.getElementById('veidoFormat');
+        this.veidoDetail = document.getElementById('veidoDetail');
+        this.veidoChannel = document.getElementById('veidoChannel');
+        this.veidoUploader = document.getElementById('veidoUploader');
+        this.veidoUploadeddate = document.getElementById('veidoUploadeddate');
+        this.veidoviewStat = document.getElementById('veidoviewStat');
         
    }
 
@@ -94,5 +104,25 @@ getFlagLink(data)
        
     
 }
+
+//Vedio Related
+geVedioInformation(data)
+{
+  
+      if(data.successfull ===false)
+      {
+        this.showError(this.vedioresultError,"Vedio Not Found");
+      }
+      else
+      {
+        this.gLink.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+      }
+        
+       
+    
+}
+
+
+
 
 }
