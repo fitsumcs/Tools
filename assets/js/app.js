@@ -107,7 +107,7 @@ function getGeoLocation(e)
         llUi.getLongLatdata(data);
             
      
-         });
+         }).catch(()=>{allUi.showError(geoerrresult,"Server Not Responding!!");});
     }
     
     // prevent 
