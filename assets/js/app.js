@@ -104,10 +104,10 @@ function getGeoLocation(e)
         
         apiAll.getGeo(ipAdress).then(data=>{
 
-        llUi.getLongLatdata(data);
-            
+            allUi.getLongLatdata(data);
+            console.log(data);
      
-         }).catch(()=>{allUi.showError(geoerrresult,"Server Not Responding!!");});
+         }).catch(()=>{allUi.showError(geoerrresult,"Cant Find The IP");})
     }
     
     // prevent 

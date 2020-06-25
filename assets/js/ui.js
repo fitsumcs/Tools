@@ -50,19 +50,13 @@ showError(place,msg)
 }
 
 // wiki related 
-getLongLat(data)
+getLongLatdata(data)
 {
     
-//    if(data.isError)
-//    {
-//     //    console.log(data);
-//     this.showError(this.wikierrresult,data.errorMessage);
-//    }
-//    else
-//    {
-    this.Longituid.innerHTML = `<b>Longituid : </b>${12}`;
-    this.Latitued.innerHTML = `<b>Latitued : </b>${12}`;
-//    }
+    
+    this.Longituid.innerHTML = `<b>Longituid : </b>${data.lon}`;
+    this.Latitued.innerHTML = `<b>Latitued : </b>${data.lat}`;
+
     
 } 
 
