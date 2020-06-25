@@ -9,6 +9,9 @@ class UI
         this.countryContinet = document.getElementById('countryContinet');
         this.countryWikiLink = document.getElementById('countryWikiLink');
         this.wikierrresult = document.getElementById('wikiresultError');
+        // Geo Relatd
+        this.Longituid = document.getElementById('Longituid');
+        this.Latitued = document.getElementById('Latitued');
         
    }
 
@@ -46,6 +49,21 @@ showError(place,msg)
 
 }
 
-
+// wiki related 
+getLongLat(data)
+{
+    
+//    if(data.isError)
+//    {
+//     //    console.log(data);
+//     this.showError(this.wikierrresult,data.errorMessage);
+//    }
+//    else
+//    {
+    this.Longituid.innerHTML = `<b>Longituid : </b>${12}`;
+    this.Latitued.innerHTML = `<b>Latitued : </b>${12}`;
+//    }
+    
+} 
 
 }

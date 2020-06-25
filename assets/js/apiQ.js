@@ -45,4 +45,27 @@ async getCountryWiki(query)
 
 }
 
+// get geo
+async getGeo(query)
+{
+   
+  
+   const response = await fetch("https://ip2country1.p.rapidapi.com/networkapi/ip2country/", {
+      "method": "POST",
+      "headers": {
+         "x-rapidapi-host": "ip2country1.p.rapidapi.com",
+         "x-rapidapi-key": "64bca0886bmsha7377930000aed5p1a6aecjsn8fa7b68dbbfb",
+         "content-type": "application/x-www-form-urlencoded"
+      },
+      "body": {
+         "ip": `${query}`
+      }
+   });
+   const data = await response.json();
+
+   return data;
+
+
+}
+
 }

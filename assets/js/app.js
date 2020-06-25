@@ -78,6 +78,7 @@ function generateWikiPage(e)
 
             allUi.getCountry(data);
             
+            
      
          });
     }
@@ -91,22 +92,22 @@ function generateWikiPage(e)
 function getGeoLocation(e)
 {
     // data from UI
-    const countryName = document.getElementById('ipAdress').value;
+    const ipAdress = document.getElementById('ipAdress').value;
  
     
-     if(countryName.length ===0)
+     if(ipAdress.length ===0)
      {
         allUi.showError(geoerrresult,"Enter Ip Adress!!");
      }
     else
     {
         
-        // apiAll.getCountryWiki(countryName).then(data=>{
+        apiAll.getGeo(ipAdress).then(data=>{
 
-        //     allUi.getCountry(data);
+        llUi.getLongLatdata(data);
             
      
-        //  });
+         });
     }
     
     // prevent 
