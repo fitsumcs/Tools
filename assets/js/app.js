@@ -165,7 +165,7 @@ function getVedioInfo(e)
         
         apiAll.getVedio(vedioURL).then(data=>{
 
-            allUi.getFlagLink(data);
+            allUi.geVedioInformation(data);
             // console.log(data)
      
          })

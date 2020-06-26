@@ -115,15 +115,14 @@ geVedioInformation(data)
       }
       else
       {
-        this.gLink.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoTitle.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoCatagory.innerHTML =`<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoFormat.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoDetail.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoChannel.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoUploader.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoUploadeddate.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
-        this.veidoviewStat.innerHTML = `<b>Download Link : </b><a href=${data.flag} target='blank'>Link</a>`;
+        this.veidoTitle.innerHTML = `<b>Vedio Title : </b>${data.info.title} `;
+        this.veidoCatagory.innerHTML =`<b>Vedio Catagory : </b>${data.info.categories[0]}`;
+        this.veidoFormat.innerHTML = `<b>Vedio Format : </b>${data.info.ext}`;
+        this.veidoDetail.innerHTML = `<b>Vedio Height : </b>${data.info.height} ,<b>Vedio Width : </b>${data.info.width}`;
+        this.veidoChannel.innerHTML = `<b>Channel Link : </b><a href=${data.info.channel_url} target='blank'>Link</a>`;
+        this.veidoUploader.innerHTML = `<b>Uploader : </b><a href=${data.info.uploader_url} target='blank'>${data.info.uploader}</a>`;
+        this.veidoUploadeddate.innerHTML = `<b>Uploded Date : </b>${data.info.upload_date}`;
+        this.veidoviewStat.innerHTML = `<b>Vedio Stat : </b> Total View : ${data.info.view_count}, Like :${data.info.like_count} , DisLike :${data.info.dislike_count} `;
       }
         
        
