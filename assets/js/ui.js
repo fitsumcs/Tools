@@ -79,8 +79,8 @@ getLongLatdata(data)
         this.gIsp.innerHTML = `<b>ISP : </b>${data.isp}`;
         this.gCountry.innerHTML = `<b>Country : </b>${data.country}`;
         this.gCity.innerHTML = `<b>City : </b>${data.city}`;
-        this.Longituid.innerHTML = `<b>Longituid : </b>${data.longitude}`;
-        this.Latitued.innerHTML = `<b>Latitued : </b>${data.latitude}`;
+        this.Longituid.innerHTML = `<b>Longitude : </b>${data.longitude}`;
+        this.Latitued.innerHTML = `<b>Latitude : </b>${data.latitude}`;
     }
  
 
