@@ -1,32 +1,34 @@
-const apiAll = new YoutubeAPI();
-const allUi = new YoutubeUI();
+const vapiAll = new YoutubeAPI();
+const vallUi = new YoutubeUI();
 // some plces on the html
 const vedioresultError = document.getElementById('vedioresultError');
 // Event Listener
 document.querySelector('#getVedioInfo').addEventListener('submit',getVedioInfo);
 
 // get getVedioInfo
-function getVedioInfo(e)
+function getVedioInfo(ev)
 {
+    
     // data from UI
     const vedioURL = document.getElementById('vedioURL').value;
  
     
      if(vedioURL.length ===0)
      {
-        allUi.showError(vedioresultError,"Enter Vedio URL!!");
+        vallUi.showError(vedioresultError,"Enter Vedio URL!!");
+         console.log('Hey there ,,')
      }
     else
     {
         
-        apiAll.getVedio(vedioURL).then(data=>{
+        vapiAll.getVedio(vedioURL).then(data=>{
 
-            allUi.geVedioInformation(data);
-            // console.log(data)
+            vallUi.geVedioInformation(data);
+            
      
          })
     }
     
     // prevent 
-    e.preventDefault();
+    ev.preventDefault();
 }

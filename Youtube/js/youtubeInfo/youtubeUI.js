@@ -11,6 +11,7 @@ class YoutubeUI
         this.veidoUploader = document.getElementById('veidoUploader');
         this.veidoUploadeddate = document.getElementById('veidoUploadeddate');
         this.veidoviewStat = document.getElementById('veidoviewStat');
+        this.vedioresultError = document.getElementById('vedioresultError');
 
 
    }
