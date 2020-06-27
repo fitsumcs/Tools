@@ -45,15 +45,15 @@
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Geo Location</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="./wikiPage.html">Country Wikipidia Page</a></li>
-                            <li><a href="iptoLoctaion.html">IP to Geo Location</a></li>
+                            <li><a href="../Country/wikiPage.html">Country Wikipidia Page</a></li>
+                            <li><a href="../Country/iptoLoctaion.html">IP to Geo Location</a></li>
                             <li><a href="#">Citty Info</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#youtube" data-toggle="collapse" aria-expanded="false">Youtube</a>
                         <ul class="collapse list-unstyled" id="youtube">
-                            <li><a href="../Youtube/youtubeVedioInfo.html">Youtube Vedio Info</a></li>
+                            <li><a href="#">Youtube Vedio Info</a></li>
                             <li><a href="#">Youtube Vedio Downloder</a></li>
                         </ul>
                     </li>
@@ -78,33 +78,43 @@
                     </div>
                 </nav>
                 
-                <h2> <img src="./img/geoLocation.jpg" style="height: 120px;width: 120px; border-radius:100px;" class="ml-5 pl-5 mr-0">  Get Longitude and Latitude</h2>
-                <p>Allow User to Convert IP to Geo Location.</p>
+                <h2> <img src="./img/youtube.png" style="height: 120px;width: 120px; border-radius:100px;" class="ml-5 pl-5 mr-0">  Get Video Info</h2>
+                <p>Allow User to view Youtube Video Information.</p>
                 <div class="line"></div>
-                <div id="georesultError">
+                <div id="vedioresultError">
                <!-- Here the form  -->
-               <form id="getGeoLocation">
+               <form id="getVedioInfo">
                 <div class="form-group mt-3">
-                  <label for="ipAdress" >IP Adress</label>
-                  <input type="text" placeholder="E.g 113.5.5.5" class="form-control" id="ipAdress" aria-describedby="ipAdress" >
+                  <label for="vedioURL" >Video URL</label>
+                  <input type="text"  class="form-control" id="vedioURL" aria-describedby="vedioURL" >
                 </div>
                 <div class="form-group mt-3">
-                  <label id="Gcountry"></label>
+                  <label id="veidoTitle"></label>
                 </div>
                 <div class="form-group mt-3">
-                  <label id="Gcity"></label>
+                  <label id="veidoCatagory"></label>
                 </div>
                 <div class="form-group mt-3">
-                  <label id="GIsp"></label>
+                  <label id="veidoFormat"></label>
                 </div>
                 <div class="form-group mt-3">
-                    <label id="Longituid"></label>
-                  </div>
-                  <div class="form-group mt-3">
-                    <label id="Latitued"></label>
-                  </div>
+                  <label id="veidoDetail"></label>
+                </div>
+                <div class="form-group mt-3">
+                  <label id="veidoChannel"></label>
+                </div>
+                <hr>
+                <div class="form-group mt-3">
+                  <label id="veidoUploader"></label>
+                </div>
+                <div class="form-group mt-3">
+                  <label id="veidoUploadeddate"></label>
+                </div>
+                <div class="form-group mt-3">
+                  <label id="veidoviewStat"></label>
+                </div>
                  </div>
-                <button type="submit" class="btn btn-primary">Get Geo Location</button>
+                <button type="submit" class="btn btn-primary">Get Video Info</button>
               </form>
                <!-- End the form -->
                <div class="line"></div>
@@ -129,8 +139,8 @@
          </script>
          <!-- Our script  -->
 <!-- our script -->
-<script src="./js/Ip/geoIpUI.js"></script>
-<script src="./js/Ip/geoIpApi.js"></script>
-<script src="./js/Ip/geoIpapp.js"></script>
+<script src="./js/wiki/wikiUI.js"></script>
+<script src="./js/wiki/wikiApi.js"></script>
+<script src="./js/wiki/wikiapp.js"></script>
     </body>
 </html>
