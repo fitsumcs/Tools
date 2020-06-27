@@ -1,30 +1,30 @@
-const apiAll = new WikiAPI();
-const allUi = new WikiUI();
+const apiAll = new YoutubeAPI();
+const allUi = new YoutubeUI();
 // some plces on the html
-const wikierrresult = document.getElementById('wikiresultError');
+const vedioresultError = document.getElementById('vedioresultError');
 // Event Listener
-document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
-// Generate wiki page 
-function generateWikiPage(e)
+document.querySelector('#getVedioInfo').addEventListener('submit',getVedioInfo);
+
+// get getVedioInfo
+function getVedioInfo(e)
 {
     // data from UI
-    const countryName = document.getElementById('countryName').value;
+    const vedioURL = document.getElementById('vedioURL').value;
  
     
-     if(countryName.length ===0)
+     if(vedioURL.length ===0)
      {
-        allUi.showError(wikierrresult,"Enter the Country Name!!");
+        allUi.showError(vedioresultError,"Enter Vedio URL!!");
      }
     else
     {
         
-        apiAll.getCountryWiki(countryName).then(data=>{
+        apiAll.getVedio(vedioURL).then(data=>{
 
-            allUi.getCountry(data);
-            
-            
+            allUi.geVedioInformation(data);
+            // console.log(data)
      
-         });
+         })
     }
     
     // prevent 
