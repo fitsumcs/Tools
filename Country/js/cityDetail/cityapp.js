@@ -1,32 +1,45 @@
-const apiAll = new WikiAPI();
-const allUi = new WikiUI();
+const apiAll = new CountryAPI();
+const allUi = new CountryUI();
 // some plces on the html
-const wikierrresult = document.getElementById('wikiresultError');
-// Event Listener
-document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
+const cityresult = document.getElementById('getCountryInfo');
+// Event Listeners
+// document.querySelector('#getWiki').addEventListener('submit',getCountryInfo);
+document.addEventListener('DOMContentLoaded',appendData);
 // Generate wiki page 
-function generateWikiPage(e)
-{
-    // data from UI
-    const countryName = document.getElementById('countryName').value;
+// function getCountryInfo(e)
+// {
+//     // data from UI
+//     const countryId = document.getElementById('countryId').value;
  
     
-     if(countryName.length ===0)
-     {
-        allUi.showError(wikierrresult,"Enter the Country Name!!");
-     }
-    else
-    {
+//      if(countryId.length ===0)
+//      {
+//         // allUi.showError(wikierrresult,"Enter the Country Name!!");
+//         console.log('Inpout Data')
+//      }
+//     else
+//     {
         
-        apiAll.getCountryWiki(countryName).then(data=>{
+//         apiAll.getCountryWiki(countryName).then(data=>{
 
-            allUi.getCountry(data);
+//             // allUi.getCountry(data);
+//             console.log(data);
             
             
      
+//          });
+//     }
+    
+//     // prevent 
+//     e.preventDefault();
+// }
+function appendData()
+{
+            apiAll.getCountriesList().then(data=>{
+
+            // allUi.getCountry(data);
+            // console.log(data.countries);
+            allUi.addtoList(data.countries)
+            
          });
     }
-    
-    // prevent 
-    e.preventDefault();
-}

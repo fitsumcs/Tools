@@ -1,14 +1,24 @@
-class WikiUI
+class CountryUI
 {
    constructor()
    {
-       this.passWordResult = document.getElementById('result');
+    //    this.passWordResult = document.getElementById('result');
     //    Wiki related 
-        this.countryName = document.getElementById('countryName2');
-        this.countryCode = document.getElementById('countryCode');
-        this.countryContinet = document.getElementById('countryContinet');
-        this.countryWikiLink = document.getElementById('countryWikiLink');
-        this.wikierrresult = document.getElementById('wikiresultError');
+    this.countryId = document.getElementById('countryId');
+
+
+   }
+   addtoList(data)
+   {
+
+   for (const key in data) {
+       if (data.hasOwnProperty(key)) {
+        //    const element = object[key];
+           this.countryId .innerHTML += `<option value=${key}>${data[key]}</option>`;
+           
+       }
+   }
+    
 
 
    }
