@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <!-- icon -->
+    <link rel="icon" href="../assets/img/tool.png" sizes="32x32" type="image/png">
         <title>Tools</title>
-            <!-- icon -->
-    <link rel="icon" href="./assets/img/tool.png" sizes="32x32" type="image/png">
+
          <!-- Bootstrap CSS CDN -->
          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- font awesome -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="./assets/css/style5.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
 
@@ -34,7 +34,7 @@
                     <p>Choose Catagory</p>
                     <hr>
                     <li >
-                        <a href="./index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li >
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">General</a>
@@ -45,8 +45,7 @@
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Geo Location</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="./Country/wikiPage.html">Country Wikipidia Page</a></li>
-                            <li><a href="#">IP to Geo Lssocation</a></li>
+                            <li><a href="#">IP to Geo Location</a></li>
                             <li><a href="#">Citty Info</a></li>
                         </ul>
                     </li>
@@ -77,23 +76,33 @@
 
                     </div>
                 </nav>
-
-                <h2>Web Tools in Various Domain ...</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <h2> <img src="./img/wiki.png" style="height: 120px;width: 120px; border-radius:100px;" class="ml-5 pl-5 mr-0">  Country Wiki Page</h2>
+                <p>View a Single Country Wikipidia Pages.</p>
                 <div class="line"></div>
-
-                <h2>General Tools</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <div class="line"></div>
-
-                <h2>Geo Location Related</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <div class="line"></div>
-
-                <h3>Youtube Related</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               <!-- Here the form  -->
+               <form id="getWiki">
+                <div class="form-group s">
+                  <label for="country" >Country Name</label>
+                  <input type="text" class="form-control" id="countryName" aria-describedby="countryName" >
+                </div>
+                <div class="form-group mt-3">
+                    <label id="countryName2"></label>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label id="countryCode"></label>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label id="countryContinet"></label>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label id="countryWikiLink"></label>
+                  </div>
+                 
+                <button type="submit" class="btn btn-primary">Get Wiki Link</button>
+              </form>
+               <!-- End the form -->
+               <div class="line"></div>
             </div>
         </div>
 
@@ -113,5 +122,10 @@
                  });
              });
          </script>
+         <!-- Our script  -->
+<!-- our script -->
+<script src="./js/wiki/wikiUI.js"></script>
+<script src="./js/wiki/wikiApi.js"></script>
+<script src="./js/wiki/wikiapp.js"></script>
     </body>
 </html>
