@@ -1,44 +1,42 @@
 const apiAll = new CountryAPI();
 const allUi = new CountryUI();
 // some plces on the html
-const cityresult = document.getElementById('getCountryInfo');
+const cityresult = document.getElementById('cityresultError');
 // Event Listeners
-// document.querySelector('#getWiki').addEventListener('submit',getCountryInfo);
+document.querySelector('#getCountryInfo').addEventListener('submit',getCountryInfo);
 document.addEventListener('DOMContentLoaded',appendData);
 // Generate wiki page 
-// function getCountryInfo(e)
-// {
-//     // data from UI
-//     const countryId = document.getElementById('countryId').value;
+function getCountryInfo(e)
+{
+    // data from UI
+    const countryId = document.getElementById('countryId').value;
  
     
-//      if(countryId.length ===0)
-//      {
-//         // allUi.showError(wikierrresult,"Enter the Country Name!!");
-//         console.log('Inpout Data')
-//      }
-//     else
-//     {
+     if(countryId.length ===0)
+     {
+        allUi.showError(cityresult,"Select the Country Name!!");
+     }
+    else
+    {
         
-//         apiAll.getCountryWiki(countryName).then(data=>{
+        // console.log(countryId);
+        apiAll.getCountryDetail(countryId).then(data=>{
 
-//             // allUi.getCountry(data);
-//             console.log(data);
+            allUi.paintCountryDetail(data);
+            
+            
             
             
      
-//          });
-//     }
+         });
+    }
     
-//     // prevent 
-//     e.preventDefault();
-// }
+    // prevent 
+    e.preventDefault();
+}
 function appendData()
 {
             apiAll.getCountriesList().then(data=>{
-
-            // allUi.getCountry(data);
-            // console.log(data.countries);
             allUi.addtoList(data.countries)
             
          });

@@ -2,9 +2,13 @@ class CountryUI
 {
    constructor()
    {
-    //    this.passWordResult = document.getElementById('result');
+   this.cityresult = document.getElementById('cityresultError');
     //    Wiki related 
     this.countryId = document.getElementById('countryId');
+      //    Country  related 
+      this.countryName = document.getElementById('countryName2');
+      this.countryCode = document.getElementById('countryCode');
+      this.countryContinet = document.getElementById('countryContinet');
 
 
    }
@@ -23,20 +27,20 @@ class CountryUI
 
    }
    // wiki related 
-    getCountry(data)
+   paintCountryDetail(data)
         {
             
-        if(data.isError)
+        if(data.status!=='success')
         {
             //    console.log(data);
-            this.showError(this.wikierrresult,data.errorMessage);
+            this.showError(this.cityresult,"There are some errors on server...");
         }
         else
         {
-            this.countryName.innerHTML = `<b>Country Name : </b>${data.results[0].name}`;
-            this.countryCode.innerHTML = `<b>Country Code : </b>${data.results[0].code}`;
-            this.countryContinet.innerHTML = `<b>Country Continet : </b>${data.lookup.continents[data.results[0].continent]}`;
-            this.countryWikiLink.innerHTML =`<b>Wikipidia Link : </b><a href=${data.results[0].wikipedia} target='blank'>Link</a>`;
+            this.countryName.innerHTML = `<b>Country Name : </b>${data.name}`;
+            this.countryCode.innerHTML = `<b>Country Code : </b>${data.code}`;
+            this.countryContinet.innerHTML = `<b>Country Continet : </b>${data.continent.name}`;
+            
         }
             
         } 
