@@ -1,30 +1,30 @@
-const apiAll = new WikiAPI();
-const allUi = new WikiUI();
+const apiAll = new GeoAPI();
+const allUi = new GeoUI();
 // some plces on the html
-const wikierrresult = document.getElementById('wikiresultError');
+const geoerrresult = document.getElementById('georesultError');
+
 // Event Listener
-document.querySelector('#getWiki').addEventListener('submit',generateWikiPage);
+document.querySelector('#getGeoLocation').addEventListener('submit',getGeoLocation);
 // Generate wiki page 
-function generateWikiPage(e)
+// get Geo Location
+function getGeoLocation(e)
 {
     // data from UI
-    const countryName = document.getElementById('countryName').value;
+    const ipAdress = document.getElementById('ipAdress').value;
  
     
-     if(countryName.length ===0)
+     if(ipAdress.length ===0)
      {
-        allUi.showError(wikierrresult,"Enter the Country Name!!");
+        allUi.showError(geoerrresult,"Enter Ip Adress!!");
      }
     else
     {
         
-        apiAll.getCountryWiki(countryName).then(data=>{
+        apiAll.getGeo(ipAdress).then(data=>{
 
-            allUi.getCountry(data);
-            
-            
+            allUi.getLongLatdata(data);
      
-         });
+         }).catch(()=>{allUi.showError(geoerrresult,"Cant Find The IP");})
     }
     
     // prevent 
