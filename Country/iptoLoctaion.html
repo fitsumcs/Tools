@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <!-- icon -->
+    <link rel="icon" href="../assets/img/tool.png" sizes="32x32" type="image/png">
         <title>Tools</title>
-            <!-- icon -->
-    <link rel="icon" href="./assets/img/tool.png" sizes="32x32" type="image/png">
+
          <!-- Bootstrap CSS CDN -->
          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- font awesome -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="./assets/css/style5.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
 
@@ -24,7 +24,7 @@
             <!-- Sidebar Holder -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <a href="./index.html" >
+                    <a href="../index.html" >
                         
                       <h1><i class="fa fa-cogs" aria-hidden="true"></i> Tools</h1> 
                     </a>
@@ -34,19 +34,19 @@
                     <p>Choose Catagory</p>
                     <hr>
                     <li >
-                        <a href="./index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li >
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">General</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li><a href="./General/passwordGenerator.html">Password Generaters</a></li>
+                            <li><a href="../General/passwordGenerator.html">Password Generaters</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Geo Location</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="./Country/wikiPage.html">Country Wikipidia Page</a></li>
-                            <li><a href="./Country/iptoLoctaion.html">IP to Geo Location</a></li>
+                            <li><a href="./wikiPage.html">Country Wikipidia Page</a></li>
+                            <li><a href="iptoLoctaion.html">IP to Geo Location</a></li>
                             <li><a href="#">Citty Info</a></li>
                         </ul>
                     </li>
@@ -77,23 +77,37 @@
 
                     </div>
                 </nav>
-
-                <h2>Web Tools in Various Domain ...</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <h2> <img src="./img/geoLocation.jpg" style="height: 120px;width: 120px; border-radius:100px;" class="ml-5 pl-5 mr-0">  Get Longitude and Latitude</h2>
+                <p>Allow User to Convert IP to Geo Location.</p>
                 <div class="line"></div>
-
-                <h2>General Tools</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <div class="line"></div>
-
-                <h2>Geo Location Related</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <div class="line"></div>
-
-                <h3>Youtube Related</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div id="georesultError">
+               <!-- Here the form  -->
+               <form id="getGeoLocation">
+                <div class="form-group mt-3">
+                  <label for="ipAdress" >IP Adress</label>
+                  <input type="text" placeholder="E.g 113.5.5.5" class="form-control" id="ipAdress" aria-describedby="ipAdress" >
+                </div>
+                <div class="form-group mt-3">
+                  <label id="Gcountry"></label>
+                </div>
+                <div class="form-group mt-3">
+                  <label id="Gcity"></label>
+                </div>
+                <div class="form-group mt-3">
+                  <label id="GIsp"></label>
+                </div>
+                <div class="form-group mt-3">
+                    <label id="Longituid"></label>
+                  </div>
+                  <div class="form-group mt-3">
+                    <label id="Latitued"></label>
+                  </div>
+                 </div>
+                <button type="submit" class="btn btn-primary">Get Geo Location</button>
+              </form>
+               <!-- End the form -->
+               <div class="line"></div>
             </div>
         </div>
 
@@ -113,5 +127,10 @@
                  });
              });
          </script>
+         <!-- Our script  -->
+<!-- our script -->
+<script src="./js/Ip/geoIpUI.js"></script>
+<script src="./js/Ip/geoIpApi.js"></script>
+<script src="./js/wiki/wikiapp.js"></script>
     </body>
 </html>
