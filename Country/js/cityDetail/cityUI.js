@@ -6,9 +6,8 @@ class CountryUI
     //    Wiki related 
     this.countryId = document.getElementById('countryId');
       //    Country  related 
-      this.countryName = document.getElementById('countryName2');
-      this.countryCode = document.getElementById('countryCode');
-      this.countryContinet = document.getElementById('countryContinet');
+    this.countryInfo = document.getElementById('countryInfo');
+     
 
 
    }
@@ -18,7 +17,7 @@ class CountryUI
    for (const key in data) {
        if (data.hasOwnProperty(key)) {
         //    const element = object[key];
-           this.countryId .innerHTML += `<option value=${key}>${data[key]}</option>`;
+        this.countryId .innerHTML += `<option value=${key}>${data[key]}</option>`;
            
        }
    }
@@ -37,9 +36,29 @@ class CountryUI
         }
         else
         {
-            this.countryName.innerHTML = `<b>Country Name : </b>${data.name}`;
-            this.countryCode.innerHTML = `<b>Country Code : </b>${data.code}`;
-            this.countryContinet.innerHTML = `<b>Country Continet : </b>${data.continent.name}`;
+            this.countryInfo.innerHTML = `<div class= "card card-body mb-3">
+            <div class="row">  
+                <div class="col-md-3">
+                    <img class="img-fluid mb-2" src="">
+                </div>
+                <div class="col-md-9">
+                    <ul class="list-group">
+                    <li class="list-group-item "><b>Country  Name :</b> ${data.name}</li>
+                    <li class="list-group-item "><b>Capital City : </b>${data.capital}</li>
+                    <li class="list-group-item "><b>Area Size: </b>${data.area_size}</li>
+                    <li class="list-group-item "><b>Polpulation: </b>${data.population}</li>
+                    <li class="list-group-item "><b>Languages: </b>${Object.values(data.languages)}</li>
+                    <li class="list-group-item "><b>Currency: </b>${data.currency.name}</li>
+                    <li class="list-group-item "><b>Phone Code: </b>${data.phone_code}</li>
+                    <li class="list-group-item "><b>Time Zone: </b>${data.timezone.timezone}</li>
+                    <li class="list-group-item "><b>Continent: </b>${data.continent.name}</li>
+                    </ul>
+                </div>
+              
+            </div>
+        </div>
+            
+            `;
             
         }
             
