@@ -19,19 +19,10 @@ function getCountryInfo(e)
     else
     {
         
-        // console.log(countryId);
-        let flag;
-       
-            // console.log(countryId);
-        apiAll.getFlag(countryId).then(data1=>{
+        
+        apiAll.getCountryDetail(countryId).then(data=>{
 
-            flag = allUi.paintCountryFlag(data1);
-            
-         });
-         apiAll.getCountryDetail(countryId).then(data=>{
-
-            allUi.paintCountryDetail(flag,data);
-            
+            allUi.paintCountryDetail(data);
             
             
             

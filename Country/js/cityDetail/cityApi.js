@@ -42,22 +42,22 @@ async getCountryDetail(Id)
 
 
 }
-// get Flag
-async getFlag(query)
-{
+// // get Flag
+// async getFlag(query)
+// {
 
 
-   const response = await fetch(`https://metropolis-api-phone.p.rapidapi.com/flag?country=${query}`, {
-      "method": "GET",
-      "headers": {
-         "x-rapidapi-host": "metropolis-api-phone.p.rapidapi.com",
-         "x-rapidapi-key": "64bca0886bmsha7377930000aed5p1a6aecjsn8fa7b68dbbfb"
-      }
-   })
-   const data = await response.json();
+//    const response = await fetch(`https://metropolis-api-phone.p.rapidapi.com/flag?country=${query}`, {
+//       "method": "GET",
+//       "headers": {
+//          "x-rapidapi-host": "metropolis-api-phone.p.rapidapi.com",
+//          "x-rapidapi-key": "64bca0886bmsha7377930000aed5p1a6aecjsn8fa7b68dbbfb"
+//       }
+//    })
+//    const data = await response.json();
 
-   return data;
+//    return data;
 
 
-}
+// }
 }
