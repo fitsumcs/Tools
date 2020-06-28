@@ -25,8 +25,9 @@ class CountryUI
 
 
    }
+
    // wiki related 
-   paintCountryDetail(data)
+   paintCountryDetail(flag,data)
         {
             
         if(data.status!=='success')
@@ -39,7 +40,7 @@ class CountryUI
             this.countryInfo.innerHTML = `<div class= "card card-body mb-3">
             <div class="row">  
                 <div class="col-md-3">
-                    <img class="img-fluid mb-2" src="">
+                    <img class="img-fluid mb-2" src="${flag}">
                 </div>
                 <div class="col-md-9">
                     <ul class="list-group">
@@ -63,6 +64,10 @@ class CountryUI
         }
             
         } 
+    paintCountryFlag(data)
+    {
+            return data.flag;
+    }
    showError(place,msg)
     {
         place.innerHTML = `<p class="alert alert-danger">${msg}</p>`;
