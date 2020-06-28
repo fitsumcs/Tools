@@ -24,9 +24,6 @@ function getCountryInfo(e)
 
             allUi.paintCountryDetail(data);
             
-            
-            
-     
          });
     }
     
@@ -35,8 +32,8 @@ function getCountryInfo(e)
 }
 function appendData()
 {
-            apiAll.getCountriesList().then(data=>{
-            allUi.addtoList(data.countries)
+            apiAll.getCountriesList().then(data1=>{
+            allUi.addtoList(data1.countries)
             
          });
     }
