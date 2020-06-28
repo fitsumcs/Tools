@@ -55,13 +55,7 @@ flatMony(data1)
    displayResult(data)
         {
             
-        // if(data.status!=='success')
-        // {
-        //     //    console.log(data);
-        //     this.showError(this.currencyresult,"There are some errors on values...");
-        // }
-        // else
-        // {
+    
             this.resultDetail.innerHTML = `<div class= "card card-body mb-3">
             <div class="row">  
                 <div class="col-md-12">
@@ -78,8 +72,6 @@ flatMony(data1)
         </div>
             
             `;
-            
-        // }
             
         } 
 
