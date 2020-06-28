@@ -34,6 +34,24 @@ async getCurrencySymbols()
 
 
 }
+// get detail 
+async changeCurrency(amount,fromC,toC)
+{
+   
+  
+   const response = await fetch(`https://bravenewcoin-v1.p.rapidapi.com/convert?qty=${amount}&from=${fromC}&to=${toC}`, {
+      "method": "GET",
+      "headers": {
+         "x-rapidapi-host": "bravenewcoin-v1.p.rapidapi.com",
+         "x-rapidapi-key": "64bca0886bmsha7377930000aed5p1a6aecjsn8fa7b68dbbfb"
+      }
+   })
+   const data = await response.json();
+
+   return data;
+
+
+}
 
 
 }

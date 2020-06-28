@@ -84,19 +84,28 @@
                 </nav>
                 
                 <h2> <img src="./img/money.jpg" style="height: 120px;width: 120px; border-radius:100px;" >  Currency Converter</h2>
-                <p>Allow User to convert digital Currencyto flat Currency.</p>
+                <p>Allow User to convert digital Currency to flat Currency.</p>
                 <div class="line"></div>
+                <div id="currencyresult"></div>
                <!-- Here the form  -->
                <form id="convertCurrency">
-                <div class="form-group s">
+                <div class="form-gsroup ">
                     <label for="currencyFrom">The currency to convert from:[Digital]</label>
                     <select id="currencyFrom" class="d-block">
                     </select>
+                </div>
                     <br><br>
+                <div class="form-gsroup ">
                     <label for="currencyTo">The currency to convert to:[Flat]</label>
                     <select id="currencyTo" class="d-block">
                     </select>
                 </div>
+                    <br>
+                <div class="form-gsroup ">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" class="d-block">
+                </div>
+                
                  <br>
                 <button type="submit" class="btn btn-primary">Convert Currency</button>
               </form>

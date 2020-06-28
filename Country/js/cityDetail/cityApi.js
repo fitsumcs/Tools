@@ -21,18 +21,17 @@ async getCountriesList()
 
    return data;
 
-sss
+
 }
 // get detail 
-async getCountryDetail(Id)
+async changeCurrency(amount,fromC,toC)
 {
    
   
-   const response = await fetch(`https://countries-cities.p.rapidapi.com/location/country/${Id}?format=json`, {
-     "mode":"no-cors",
-     "method": "GET",
+   const response = await fetch(`https://bravenewcoin-v1.p.rapidapi.com/convert?qty=${amount}}&from=${fromC}&to=${toC}`, {
+      "method": "GET",
       "headers": {
-         "x-rapidapi-host": "countrises-cities.p.rapidapi.com",
+         "x-rapidapi-host": "bravenewcoin-v1.p.rapidapi.com",
          "x-rapidapi-key": "64bca0886bmsha7377930000aed5p1a6aecjsn8fa7b68dbbfb"
       }
    })
